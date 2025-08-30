@@ -3,23 +3,17 @@ import { Zap, Github, Twitter, Linkedin, Mail } from 'lucide-react'
 
 export default function Footer() {
   const navigation = {
-    main: [
-      { name: 'Home', href: '#home' },
-      { name: 'Services', href: '#services' },
-      { name: 'About', href: '#about' },
+    company: [
       { name: 'Contact', href: '#contact' },
+      { name: 'Help Center', href: '/help-center' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms of Service', href: '/terms-of-service' },
     ],
-    services: [
-      { name: 'Templates & Automation', href: '#templates' },
-      { name: 'Faceless Videos', href: '#videos' },
-      { name: 'Financial Analysis', href: '#analysis' },
-      { name: 'Customer Service', href: '#customer-service' },
-    ],
-    support: [
-      { name: 'Documentation', href: '#docs' },
-      { name: 'Help Center', href: '#help' },
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
+    links: [
+      { name: 'What is Automation', href: '/what-is-automation' },
+      { name: 'How to Leverage AI', href: '/how-to-leverage-ai' },
+      { name: 'Success Story', href: '#success-story' },
+      { name: 'Pricing', href: '/pricing' },
     ],
     social: [
       {
@@ -84,7 +78,7 @@ export default function Footer() {
               Company
             </h3>
             <ul className="space-y-3">
-              {navigation.main.map((item) => (
+              {navigation.company.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -99,10 +93,10 @@ export default function Footer() {
 
           <div>
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
-              Services
+              Links
             </h3>
             <ul className="space-y-3">
-              {navigation.services.map((item) => (
+              {navigation.links.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -121,16 +115,15 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} FlowTech. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            {navigation.support.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="mt-4 md:mt-0">
+            <Link
+              href="https://claude.ai/code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+            >
+              Made with Claude Code
+            </Link>
           </div>
         </div>
       </div>

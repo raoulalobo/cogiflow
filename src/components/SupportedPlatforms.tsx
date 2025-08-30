@@ -1,62 +1,138 @@
 'use client'
 
-import { Zap, Settings, Layers, Workflow, Bot, Network } from 'lucide-react'
+import { Network } from 'lucide-react'
+import Image from 'next/image'
+
+// Import des vraies images logo
+import makeComLogo from '../../logos/make.webp'
+import n8nLogo from '../../logos/n8n.webp'
+import zapierLogo from '../../logos/zapier.webp'
+import microsoftLogo from '../../logos/microsoft.webp'
+import chatGPTLogo from '../../logos/chatGPT.webp'
+import claudeLogo from '../../logos/claude.webp'
+
+// Composants logo avec vraies images
+const MakeComLogo = () => (
+  <Image 
+    src={makeComLogo} 
+    alt="Make.com logo" 
+    width={24} 
+    height={24} 
+    className="w-6 h-6 object-cover"
+  />
+)
+
+const N8nLogo = () => (
+  <Image 
+    src={n8nLogo} 
+    alt="n8n logo" 
+    width={24} 
+    height={24} 
+    className="w-6 h-6 object-cover"
+  />
+)
+
+const ZapierLogo = () => (
+  <Image 
+    src={zapierLogo} 
+    alt="Zapier logo" 
+    width={24} 
+    height={24} 
+    className="w-6 h-6 object-cover"
+  />
+)
+
+const MicrosoftLogo = () => (
+  <Image 
+    src={microsoftLogo} 
+    alt="Microsoft Power Automate logo" 
+    width={24} 
+    height={24} 
+    className="w-6 h-6 object-cover"
+  />
+)
+
+const ChatGPTLogo = () => (
+  <Image 
+    src={chatGPTLogo} 
+    alt="ChatGPT logo" 
+    width={24} 
+    height={24} 
+    className="w-6 h-6 object-cover"
+  />
+)
+
+const ClaudeLogo = () => (
+  <Image 
+    src={claudeLogo} 
+    alt="Claude AI logo" 
+    width={24} 
+    height={24} 
+    className="w-6 h-6 object-cover"
+  />
+)
 
 export default function SupportedPlatforms() {
   const platforms = [
     {
       name: 'Make.com',
       description: 'Powerful visual automation platform with extensive integrations and enterprise-grade reliability',
-      icon: Workflow,
+      icon: MakeComLogo,
       color: 'from-purple-500 to-purple-600',
       bgColor: 'bg-purple-50',
       borderColor: 'border-purple-200',
-      features: ['Intuitive visual interface', '1000+ native integrations', 'Advanced error handling']
+      features: ['Intuitive visual interface', '1000+ native integrations', 'Advanced error handling'],
+      url: 'https://www.make.com'
     },
     {
       name: 'n8n',
       description: 'Open-source flexible platform with complete control over your automation infrastructure',
-      icon: Network,
+      icon: N8nLogo,
       color: 'from-red-500 to-red-600',
       bgColor: 'bg-red-50',
       borderColor: 'border-red-200',
-      features: ['Open source & self-hosted', 'Complex conditional logic', 'Unlimited customization']
+      features: ['Open source & self-hosted', 'Complex conditional logic', 'Unlimited customization'],
+      url: 'https://n8n.io'
     },
     {
       name: 'Zapier',
       description: 'Market-leading solution for easily connecting your favorite applications and services',
-      icon: Zap,
+      icon: ZapierLogo,
       color: 'from-orange-500 to-orange-600',
       bgColor: 'bg-orange-50',
       borderColor: 'border-orange-200',
-      features: ['5000+ applications', 'Simple configuration', 'Proven reliability']
+      features: ['5000+ applications', 'Simple configuration', 'Proven reliability'],
+      url: 'https://zapier.com'
     },
     {
       name: 'Microsoft Power Automate',
       description: 'Perfect integration with Microsoft ecosystem and enterprise-grade business solutions',
-      icon: Settings,
+      icon: MicrosoftLogo,
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200',
-      features: ['Office 365 integration', 'Enterprise security', 'Advanced governance']
+      features: ['Office 365 integration', 'Enterprise security', 'Advanced governance'],
+      url: 'https://powerautomate.microsoft.com'
     },
     {
       name: 'Custom Solutions',
       description: 'Tailored APIs, webhooks, and specialized development according to your unique requirements',
-      icon: Bot,
+      icon: ChatGPTLogo,
       color: 'from-green-500 to-green-600',
       bgColor: 'bg-green-50',
       borderColor: 'border-green-200',
-      features: ['Bespoke development', 'Custom APIs', 'Unique integrations']
+      features: ['Bespoke development', 'Custom APIs', 'Unique integrations'],
+      url: 'https://openai.com/chatgpt'
     },
     {
       name: 'Hybrid Solutions',
       description: 'Combination of multiple platforms for complex workflows and optimized performance',
-      icon: Layers,
+      icon: ClaudeLogo,
       color: 'from-indigo-500 to-indigo-600',
       bgColor: 'bg-indigo-50',
       borderColor: 'border-indigo-200',
-      features: ['Multi-platform approach', 'Complex workflows', 'Performance optimization']
+      features: ['Multi-platform approach', 'Complex workflows', 'Performance optimization'],
+      url: 'https://claude.ai'
     }
   ]
 
@@ -75,10 +151,13 @@ export default function SupportedPlatforms() {
             <span className="text-sm font-medium text-primary-700">Supported Platforms</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            We Master Every{' '}
-            <span className="gradient-text">Automation Platform</span>
-          </h2>
+          <a 
+            href="#platforms" 
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 block cursor-pointer hover:text-primary-600 transition-colors duration-300 group"
+          >
+            <span className="text-gray-900">We Master Every{' '}</span>
+            <span className="gradient-text group-hover:underline">Automation Platform</span>
+          </a>
           
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             No limitations to a single platform. We select and use the best tools 
@@ -101,10 +180,16 @@ export default function SupportedPlatforms() {
                 {/* Background gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${platform.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
                 
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${platform.color} rounded-xl mb-4 relative z-10`}>
-                  <IconComponent className="h-6 w-6 text-white" />
-                </div>
+                {/* Logo cliquable */}
+                <a 
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${platform.color} rounded-xl mb-4 relative z-10 hover:scale-110 transition-transform duration-300 cursor-pointer`}
+                  title={`Visiter ${platform.name}`}
+                >
+                  <IconComponent />
+                </a>
 
                 {/* Platform name */}
                 <h3 className="text-xl font-bold mb-3 relative z-10 text-gray-900">{platform.name}</h3>

@@ -17,7 +17,11 @@ import {
   Shield,
   Code,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Heart,
+  Calendar,
+  MessageSquare,
+  Package
 } from 'lucide-react'
 
 export default function AutomationTypes() {
@@ -171,6 +175,36 @@ export default function AutomationTypes() {
           icon: TrendingUp
         }
       ]
+    },
+    {
+      category: 'Healthcare',
+      icon: Heart,
+      color: 'from-red-500 to-red-600',
+      bgColor: 'bg-red-50',
+      borderColor: 'border-red-200',
+      description: 'Streamline medical processes for better efficiency and optimal patient care management.',
+      automations: [
+        {
+          name: 'Patient Appointment Reminders',
+          description: 'Automated reminders via Calendly with personalized SMS and email notifications',
+          icon: Calendar
+        },
+        {
+          name: 'Automated Post-Consultation Follow-up',
+          description: 'Automatic follow-up questionnaire delivery and patient feedback collection',
+          icon: MessageSquare
+        },
+        {
+          name: 'Pharmacy & Clinic Inventory Management',
+          description: 'Automated stock tracking with reorder alerts and supplier order management',
+          icon: Package
+        },
+        {
+          name: 'Secure Patient Record Synchronization',
+          description: 'GDPR-compliant secure integration between medical software systems',
+          icon: Shield
+        }
+      ]
     }
   ]
 
@@ -211,8 +245,8 @@ export default function AutomationTypes() {
             <span className="text-sm font-medium text-primary-700">Automation Specializations</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Complete Workflows for Every{' '}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+            <span className="text-gray-900">Complete Workflows for Every{' '}</span>
             <span className="gradient-text">Business Function</span>
           </h2>
           
@@ -223,7 +257,7 @@ export default function AutomationTypes() {
         </div>
 
         {/* Automation Types Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {automationTypes.map((type, index) => {
             const CategoryIcon = type.icon
             return (
