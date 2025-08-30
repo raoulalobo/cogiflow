@@ -3,22 +3,22 @@
 import { Network } from 'lucide-react'
 import Image from 'next/image'
 
-// Import des vraies images logo
-import makeComLogo from '../../logos/make.webp'
-import n8nLogo from '../../logos/n8n.webp'
-import zapierLogo from '../../logos/zapier.webp'
-import microsoftLogo from '../../logos/microsoft.webp'
-import chatGPTLogo from '../../logos/chatGPT.webp'
-import claudeLogo from '../../logos/claude.webp'
+// Chemins des images logo dans public/logos
+const makeComLogo = '/logos/make.webp'
+const n8nLogo = '/logos/n8n.webp'
+const zapierLogo = '/logos/zapier.webp'
+const microsoftLogo = '/logos/microsoft.webp'
+const chatGPTLogo = '/logos/chatGPT.webp'
+const claudeLogo = '/logos/claude.webp'
 
 // Composants logo avec vraies images
 const MakeComLogo = () => (
   <Image 
     src={makeComLogo} 
     alt="Make.com logo" 
-    width={24} 
-    height={24} 
-    className="w-6 h-6 object-cover"
+    width={40} 
+    height={40} 
+    className="w-full h-full object-cover rounded-xl"
   />
 )
 
@@ -26,9 +26,9 @@ const N8nLogo = () => (
   <Image 
     src={n8nLogo} 
     alt="n8n logo" 
-    width={24} 
-    height={24} 
-    className="w-6 h-6 object-cover"
+    width={40} 
+    height={40} 
+    className="w-full h-full object-cover rounded-xl"
   />
 )
 
@@ -36,9 +36,9 @@ const ZapierLogo = () => (
   <Image 
     src={zapierLogo} 
     alt="Zapier logo" 
-    width={24} 
-    height={24} 
-    className="w-6 h-6 object-cover"
+    width={40} 
+    height={40} 
+    className="w-full h-full object-cover rounded-xl"
   />
 )
 
@@ -46,9 +46,9 @@ const MicrosoftLogo = () => (
   <Image 
     src={microsoftLogo} 
     alt="Microsoft Power Automate logo" 
-    width={24} 
-    height={24} 
-    className="w-6 h-6 object-cover"
+    width={40} 
+    height={40} 
+    className="w-full h-full object-cover rounded-xl"
   />
 )
 
@@ -56,9 +56,9 @@ const ChatGPTLogo = () => (
   <Image 
     src={chatGPTLogo} 
     alt="ChatGPT logo" 
-    width={24} 
-    height={24} 
-    className="w-6 h-6 object-cover"
+    width={40} 
+    height={40} 
+    className="w-full h-full object-cover rounded-xl"
   />
 )
 
@@ -66,9 +66,9 @@ const ClaudeLogo = () => (
   <Image 
     src={claudeLogo} 
     alt="Claude AI logo" 
-    width={24} 
-    height={24} 
-    className="w-6 h-6 object-cover"
+    width={40} 
+    height={40} 
+    className="w-full h-full object-cover rounded-xl"
   />
 )
 
@@ -185,7 +185,7 @@ export default function SupportedPlatforms() {
                   href={platform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${platform.color} rounded-xl mb-4 relative z-10 hover:scale-110 transition-transform duration-300 cursor-pointer`}
+                  className="inline-flex items-center justify-center w-12 h-12 overflow-hidden rounded-xl mb-4 relative z-10 hover:scale-110 transition-transform duration-300 cursor-pointer"
                   title={`Visiter ${platform.name}`}
                 >
                   <IconComponent />
