@@ -27,7 +27,7 @@
 
 ## 🚀 Development Commands
 ```bash
-npm run dev     # Development server (localhost:3002)
+npm run dev     # Development server (localhost:3001)
 npm run build   # Production build
 npm run start   # Production server
 npm run lint    # Code linting
@@ -105,7 +105,9 @@ src/
 ### Hero Section
 - Multi-platform messaging (Make.com, n8n, Zapier)
 - "Test-Before-Pay" value propositions
-- Animated dashboard preview with responsive design
+- **NEW: Animated workflow illustration** - Gmail → Make.com → Slack → CRM
+- Interactive nodes with real-time status and animations
+- Technical credibility through visual workflow representation
 
 ### Supported Platforms Section
 - 6 platform cards with detailed descriptions
@@ -136,6 +138,9 @@ src/
 - **Content Consolidation** - Streamlined from 8 sections to 5 for better UX
 - **Technical Positioning** - Emphasized complete workflow delivery with documentation
 - **Language Consistency** - Converted all French content to professional English
+- **🆕 Workflow Visualization** - Replaced generic dashboard with authentic automation workflow illustration
+- **🆕 Interactive Elements** - Added animated nodes, status indicators, and real-time metrics
+- **🆕 Business Alignment** - Visual now perfectly matches FlowTech's core automation services
 
 ## 📝 SEO Strategy
 - **Primary Keywords:** Custom automation, Make.com, n8n workflows, Zapier automation
@@ -143,6 +148,6 @@ src/
 - **Content Focus:** Platform comparison, automation specializations, technical delivery
 
 ---
-*Last Updated: 2025-08-30*
-*Site URL: http://localhost:3002*
-*Git Status: Ready for commit*
+*Last Updated: 2025-08-30 - Workflow Visualization Update*
+*Site URL: http://localhost:3001*
+*Git Status: Ready for commit - Workflow illustration implementation*

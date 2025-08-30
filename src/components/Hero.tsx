@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Play, ArrowRight, Sparkles } from 'lucide-react'
+import { Play, ArrowRight, Sparkles, Mail, MessageSquare, Users, Settings, Zap } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Hero() {
@@ -75,56 +75,94 @@ export default function Hero() {
           <div className="relative mt-8 lg:mt-0 order-first lg:order-last">
             <div className="relative bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 p-4 sm:p-6 transform rotate-1 hover:rotate-0 transition-all duration-300 hover:shadow-3xl max-w-md mx-auto lg:max-w-none">
               <div className="space-y-3 sm:space-y-4">
-                {/* Mock dashboard header */}
+                {/* Workflow header */}
                 <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-gray-100">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '500ms'}}></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '1000ms'}}></div>
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-600">FlowTech Dashboard</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Automation Workflow</div>
                 </div>
 
-                {/* Mock workflow cards */}
-                <div className="grid grid-cols-2 gap-2 sm:gap-4">
-                  <div className="p-2 sm:p-4 bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg border border-primary-200 transform hover:scale-105 transition-transform duration-200">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary-500 rounded-lg mb-2 sm:mb-3"></div>
-                    <div className="h-3 sm:h-4 bg-primary-300 rounded w-3/4 mb-1 sm:mb-2"></div>
-                    <div className="h-2 sm:h-3 bg-primary-200 rounded w-1/2"></div>
+                {/* Workflow nodes */}
+                <div className="space-y-3 sm:space-y-4">
+                  {/* Gmail Node */}
+                  <div className="relative">
+                    <div className="flex items-center space-x-3 p-3 bg-gradient-to-r from-red-50 to-red-100 rounded-lg border border-red-200 transform hover:scale-[1.02] transition-all duration-200">
+                      <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
+                        <Mail className="h-4 w-4 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-xs font-bold text-red-700">Gmail</div>
+                        <div className="text-xs text-red-600">New emails: 3</div>
+                      </div>
+                      <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    {/* Connection line */}
+                    <div className="absolute left-4 top-full w-0.5 h-3 bg-gradient-to-b from-red-300 to-blue-300"></div>
                   </div>
-                  <div className="p-2 sm:p-4 bg-gradient-to-br from-secondary-50 to-secondary-100 rounded-lg border border-secondary-200 transform hover:scale-105 transition-transform duration-200">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-secondary-500 rounded-lg mb-2 sm:mb-3"></div>
-                    <div className="h-3 sm:h-4 bg-secondary-300 rounded w-3/4 mb-1 sm:mb-2"></div>
-                    <div className="h-2 sm:h-3 bg-secondary-200 rounded w-1/2"></div>
+
+                  {/* Make.com Node */}
+                  <div className="relative">
+                    <div className="flex items-center space-x-3 p-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200 transform hover:scale-[1.02] transition-all duration-200">
+                      <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <Settings className="h-4 w-4 text-white animate-spin" style={{animationDuration: '3s'}} />
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-xs font-bold text-blue-700">Make.com</div>
+                        <div className="text-xs text-blue-600">Processing...</div>
+                      </div>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '500ms'}}></div>
+                    </div>
+                    {/* Connection line */}
+                    <div className="absolute left-4 top-full w-0.5 h-3 bg-gradient-to-b from-blue-300 to-green-300"></div>
                   </div>
-                  <div className="p-2 sm:p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg border border-purple-200 transform hover:scale-105 transition-transform duration-200">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-purple-500 rounded-lg mb-2 sm:mb-3"></div>
-                    <div className="h-3 sm:h-4 bg-purple-300 rounded w-3/4 mb-1 sm:mb-2"></div>
-                    <div className="h-2 sm:h-3 bg-purple-200 rounded w-1/2"></div>
-                  </div>
-                  <div className="p-2 sm:p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200 transform hover:scale-105 transition-transform duration-200">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-lg mb-2 sm:mb-3"></div>
-                    <div className="h-3 sm:h-4 bg-green-300 rounded w-3/4 mb-1 sm:mb-2"></div>
-                    <div className="h-2 sm:h-3 bg-green-200 rounded w-1/2"></div>
+
+                  {/* Slack & CRM Nodes */}
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="flex items-center space-x-2 p-2 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border border-green-200 transform hover:scale-[1.02] transition-all duration-200">
+                      <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center">
+                        <MessageSquare className="h-3 w-3 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-green-700">Slack</div>
+                        <div className="text-xs text-green-600">Sent ✓</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2 p-2 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200 transform hover:scale-[1.02] transition-all duration-200">
+                      <div className="w-6 h-6 bg-purple-500 rounded flex items-center justify-center">
+                        <Users className="h-3 w-3 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-purple-700">CRM</div>
+                        <div className="text-xs text-purple-600">Updated</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Mock chart */}
-                <div className="h-24 sm:h-32 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-lg p-3 sm:p-4 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-400 via-purple-400 to-secondary-400 opacity-20"></div>
-                  <div className="relative z-10">
-                    <div className="text-xs sm:text-sm font-medium text-gray-700 mb-2">Performance Analytics</div>
-                    <div className="flex items-end space-x-1 sm:space-x-2 h-12 sm:h-16">
-                      {[40, 60, 30, 80, 50, 90, 70].map((height, index) => (
-                        <div 
-                          key={index} 
-                          className="bg-gradient-to-t from-primary-500 to-secondary-500 rounded-t flex-1 opacity-80 transform hover:opacity-100 transition-opacity duration-200"
-                          style={{ 
-                            height: `${height}%`,
-                            animationDelay: `${index * 100}ms`
-                          }}
-                        ></div>
-                      ))}
+                {/* Workflow status */}
+                <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-3 sm:p-4 border border-green-200">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-xs sm:text-sm font-bold text-gray-700">Workflow Status</div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-green-700 font-medium">TEST PHASE</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-gray-600">Emails processed:</span>
+                      <span className="font-bold text-gray-800">47</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-gray-600">Success rate:</span>
+                      <span className="font-bold text-green-600">100%</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-gray-600">Cost saved:</span>
+                      <span className="font-bold text-blue-600">€2,340/month</span>
                     </div>
                   </div>
                 </div>
