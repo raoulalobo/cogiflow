@@ -8,7 +8,8 @@ import {
   ArrowRight,
   Zap,
   BarChart3,
-  Cpu
+  Cpu,
+  Target
 } from 'lucide-react'
 
 export default function Services() {
@@ -30,18 +31,33 @@ export default function Services() {
     },
     {
       icon: Workflow,
-      title: 'Bespoke Automation Development',
-      description: 'Hand-crafted n8n workflows built from scratch to match your exact business processes.',
+      title: 'Custom Automation Development',
+      description: 'Custom workflows created with Make.com, n8n, Zapier or other platforms according to your specific needs.',
       features: [
-        'Tailored to your workflow',
+        'Optimal platform selection',
         'No generic templates',
-        'Built for your integrations',
+        'Custom integrations',
         'Scalable architecture'
       ],
       color: 'from-secondary-500 to-secondary-600',
       bgColor: 'from-secondary-50 to-secondary-100',
       borderColor: 'border-secondary-200',
       image: '/images/video-creation.jpg'
+    },
+    {
+      icon: Target,
+      title: 'Platform Selection & Strategy',
+      description: 'Expert analysis to choose the best platform: Make.com, n8n, Zapier, or hybrid solution.',
+      features: [
+        'Existing systems audit',
+        'Cost-benefit analysis',
+        'Personalized recommendation',
+        'Migration roadmap'
+      ],
+      color: 'from-indigo-500 to-indigo-600',
+      bgColor: 'from-indigo-50 to-indigo-100',
+      borderColor: 'border-indigo-200',
+      image: '/images/platform-selection.jpg'
     },
     {
       icon: Cpu,
@@ -88,14 +104,14 @@ export default function Services() {
             Tired of Templates That{' '}
             <span className="gradient-text">Don't Work</span>?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Skip the confusion of generic templates. Get custom automations built specifically 
             for your business, your processes, your success.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
@@ -127,7 +143,7 @@ export default function Services() {
                     <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-600 text-base mt-2">
+                    <CardDescription className="text-gray-700 text-base mt-2">
                       {service.description}
                     </CardDescription>
                   </div>
@@ -139,7 +155,7 @@ export default function Services() {
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
-                        <span className="text-sm text-gray-700 font-medium">{feature}</span>
+                        <span className="text-sm text-gray-800 font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -164,7 +180,7 @@ export default function Services() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready for Something Built Just for You?
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               Stop wasting time with templates that almost fit. Let's create automation 
               that works exactly how YOUR business operates.
             </p>

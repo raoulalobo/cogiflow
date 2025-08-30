@@ -1,10 +1,8 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import Services from '@/components/Services'
+import SupportedPlatforms from '@/components/SupportedPlatforms'
+import AutomationTypes from '@/components/AutomationTypes'
 import HowItWorks from '@/components/HowItWorks'
-import Opportunities from '@/components/Opportunities'
-import PricingPhilosophy from '@/components/PricingPhilosophy'
-import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -12,11 +10,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
+      <SupportedPlatforms />
+      <AutomationTypes />
       <HowItWorks />
-      <Opportunities />
-      <PricingPhilosophy />
-      <FinalCTA />
       <Footer />
     </main>
   )

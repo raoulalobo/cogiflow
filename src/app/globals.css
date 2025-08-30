@@ -169,3 +169,21 @@ a {
   background-color: #a855f7;
   color: white;
 }
+
+/* Improved contrast utility classes */
+.text-readable-gray {
+  color: #374151; /* gray-700 for better contrast */
+}
+
+.text-readable-muted {
+  color: #4B5563; /* gray-600 for better contrast */
+}
+
+.text-readable-subtle {
+  color: #6B7280; /* gray-500 for subtle but readable text */
+}
+
+/* Better contrast for light backgrounds */
+.text-high-contrast {
+  color: #111827; /* gray-900 for maximum readability */
+}

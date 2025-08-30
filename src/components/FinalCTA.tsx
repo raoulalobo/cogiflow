@@ -182,7 +182,7 @@ export default function FinalCTA() {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-500">
             <div className="flex items-center space-x-2">
               <Zap className="h-4 w-4 text-primary-500" />
-              <span>Expert n8n automation</span>
+              <span>Multi-platform expertise</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-4 w-4 text-green-500" />

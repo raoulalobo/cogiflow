@@ -1,7 +1,7 @@
 # FlowTech Website - Project Documentation
 
 ## 🎯 Project Overview
-**FlowTech** - Custom automation website emphasizing "Test-Before-Pay" approach and bespoke n8n solutions.
+**FlowTech** - Multi-platform custom automation website emphasizing "Test-Before-Pay" approach and comprehensive workflow solutions across Make.com, n8n, Zapier, and other platforms.
 
 ## 🏗️ Technical Stack
 - **Framework:** Next.js 14 with App Router
@@ -16,17 +16,18 @@
 - **Primary:** Purple (#8B5CF6, #A855F7)
 - **Secondary:** Blue (#3B82F6, #2563EB) 
 - **Gradients:** Purple-to-Blue
-- **Neutrals:** Modern grays
+- **Neutrals:** Modern grays with improved contrast (gray-700, gray-800)
 
 ### Key Design Principles
 - Minimalist, professional aesthetic
 - Gradient text for emphasis
 - Subtle animations and micro-interactions
 - Mobile-first responsive design
+- High contrast for accessibility (WCAG compliant)
 
 ## 🚀 Development Commands
 ```bash
-npm run dev     # Development server (localhost:3001)
+npm run dev     # Development server (localhost:3002)
 npm run build   # Production build
 npm run start   # Production server
 npm run lint    # Code linting
@@ -36,94 +37,112 @@ npm run lint    # Code linting
 ```
 src/
 ├── app/
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx            # Main home page
-│   └── globals.css         # Global styles and animations
+│   ├── layout.tsx            # Root layout with multi-platform SEO metadata
+│   ├── page.tsx              # Main home page (simplified structure)
+│   └── globals.css           # Global styles and animations + contrast utilities
 ├── components/
-│   ├── ui/                 # Reusable UI components
-│   ├── Header.tsx          # Navigation header
-│   ├── Hero.tsx            # Hero section
-│   ├── Services.tsx        # Services showcase
-│   ├── HowItWorks.tsx      # Process explanation (Test-Before-Pay)
-│   ├── Opportunities.tsx   # Template problems vs custom solutions
-│   ├── PricingPhilosophy.tsx # Pricing approach explanation
-│   ├── FinalCTA.tsx        # Call-to-action section
-│   └── Footer.tsx          # Site footer
+│   ├── ui/                   # Reusable UI components
+│   ├── Header.tsx            # Responsive navigation with scroll effects
+│   ├── Hero.tsx              # Hero section with multi-platform messaging
+│   ├── SupportedPlatforms.tsx # Platform showcase (Make.com, n8n, Zapier, etc.)
+│   ├── AutomationTypes.tsx   # Detailed automation specializations
+│   ├── HowItWorks.tsx        # Test-Before-Pay process explanation
+│   └── Footer.tsx            # Site footer
 └── lib/
-    └── utils.ts            # Utility functions (cn helper)
+    └── utils.ts              # Utility functions (cn helper)
 ```
 
 ## 🎯 Business Positioning
 
 ### Core Value Proposition
-- **No Generic Templates:** 100% custom automation solutions
-- **Test-Before-Pay:** Zero upfront risk for clients
-- **Affordable Pricing:** Accessible to all business sizes
-- **Personal Guidance:** Custom consultation and ongoing support
+- **Multi-Platform Expertise:** Make.com, n8n, Zapier, Microsoft Power Automate, and custom solutions
+- **Test-Before-Pay Model:** Zero upfront risk for clients
+- **Complete Workflow Delivery:** JSON structure, documentation, and configuration guidance
+- **Technical Excellence:** Production-ready workflows with error handling
+
+### Platform Specializations
+1. **Make.com** - Visual automation with 1000+ native integrations
+2. **n8n** - Open-source flexibility with unlimited customization
+3. **Zapier** - 5000+ applications with proven reliability
+4. **Microsoft Power Automate** - Enterprise-grade Microsoft ecosystem integration
+5. **Custom Solutions** - Bespoke APIs, webhooks, and specialized development
+6. **Hybrid Solutions** - Multi-platform approaches for complex workflows
+
+### Automation Categories
+- **Marketing & Sales:** Lead nurturing, CRM sync, email campaigns, lead scoring
+- **E-commerce:** Order processing, inventory management, transactional emails, cart recovery
+- **Productivity:** Data sync, automated reports, ticket management, backup systems
+- **Social Media:** Multi-platform publishing, monitoring, content curation, analytics
+- **Finance:** Bank reconciliation, automated invoicing, financial reporting, treasury alerts
 
 ### Key Differentiators
-1. **Custom-Built Solutions:** No templates, everything built from scratch
-2. **Risk-Free Model:** Clients test and approve before paying
-3. **Personal Approach:** One-on-one consultation and support
-4. **Fair Pricing:** No hidden costs, transparent pricing
+1. **Platform-Agnostic Approach:** Best tool selection based on client needs
+2. **Complete Technical Delivery:** JSON workflows + documentation + guidance
+3. **Test-Before-Pay Model:** Clients approve before payment
+4. **Specialized Expertise:** 20+ automation types across 5 business categories
 
 ### Target Message
-"Stop wasting time with generic templates. Get custom n8n automation built specifically for YOUR business. Test everything first, pay only when you're completely satisfied."
+"Get custom automation solutions built with Make.com, n8n, Zapier & more, specifically for YOUR business. Test everything first, pay only when you're completely satisfied."
 
-## 🔧 Technical Notes
+## 🔧 Technical Features
 
-### Important Files
-- `tailwind.config.js` - Custom design tokens and colors
-- `next.config.js` - Next.js configuration
-- `src/app/layout.tsx` - SEO metadata and page structure
-- `src/app/globals.css` - Custom animations and global styles
+### Workflow Delivery Package
+- **Ready-to-Import JSON Structure** - Complete workflow configuration
+- **Detailed Node Configuration Guide** - Step-by-step setup instructions
+- **Business Logic Documentation** - Comprehensive explanation of workflow logic
+- **Error Handling Procedures** - Built-in error management and fallbacks
+- **Testing Protocols** - Quality assurance procedures
+- **Maintenance Instructions** - Ongoing support guidelines
 
-### Custom Animations
-- Blob animations for background elements
-- Smooth transitions and hover effects
-- Custom gradient text effects
-- Responsive micro-interactions
-
-### Performance Features
-- Optimized images and assets
-- Mobile-first responsive design
-- Fast page loads with Next.js optimization
-- SEO-optimized metadata
+### Performance Optimizations
+- **Deep Responsive Design** - Optimized for mobile, tablet, and desktop
+- **Accessibility Compliance** - High contrast text (gray-700+) for better readability
+- **Multi-language Consistency** - 100% English content
+- **SEO Optimization** - Multi-platform keyword targeting
 
 ## 🎨 Component Guide
 
 ### Hero Section
-- Emphasizes custom solutions over templates
+- Multi-platform messaging (Make.com, n8n, Zapier)
 - "Test-Before-Pay" value propositions
-- Animated dashboard preview mockup
+- Animated dashboard preview with responsive design
 
-### Services Section  
-- Personal consultation focus
-- Bespoke development emphasis
-- Custom AI agents and n8n workflows
+### Supported Platforms Section
+- 6 platform cards with detailed descriptions
+- Feature comparisons and strengths
+- Platform selection guidance
 
-### How It Works
+### Automation Types Section  
+- 5 business categories with 4 specializations each
+- Technical approach explanation
+- Complete workflow package details
+
+### How It Works Section
 - 3-step "Test-Before-Pay" process
-- Risk-free approach highlighted
-- Clear benefit explanations
+- Custom automation workflow emphasis
+- Risk-free benefits highlighted
 
-### Pricing Philosophy
-- Addresses template confusion problem
-- Explains custom approach benefits
-- Transparent pricing model
+## 🌟 Current Site Structure (Optimized)
+1. **Header** - Responsive navigation with scroll effects
+2. **Hero** - Multi-platform value proposition + primary CTA
+3. **Supported Platforms** - Platform expertise showcase
+4. **Automation Types** - Detailed specializations by business category
+5. **How It Works** - Test-Before-Pay process
+6. **Footer** - Contact information and links
 
-## 🌟 Key Success Metrics
-- Clear differentiation from template-based competitors
-- Emphasis on custom, bespoke solutions
-- Risk-free value proposition
-- Professional, trustworthy presentation
+## 📈 Key Improvements Made
+- **Multi-Platform Positioning** - Expanded from n8n-only to comprehensive platform coverage
+- **Accessibility Enhancement** - Improved text contrast for better readability
+- **Content Consolidation** - Streamlined from 8 sections to 5 for better UX
+- **Technical Positioning** - Emphasized complete workflow delivery with documentation
+- **Language Consistency** - Converted all French content to professional English
 
-## 📝 Content Strategy
-- **Problem-focused:** Addresses template confusion
-- **Solution-oriented:** Custom automation benefits
-- **Trust-building:** Test-before-pay approach
-- **Value-driven:** Affordable, accessible pricing
+## 📝 SEO Strategy
+- **Primary Keywords:** Custom automation, Make.com, n8n workflows, Zapier automation
+- **Long-tail Keywords:** Test before pay automation, multi-platform automation expert
+- **Content Focus:** Platform comparison, automation specializations, technical delivery
 
 ---
 *Last Updated: 2025-08-30*
-*Site URL: http://localhost:3001*
+*Site URL: http://localhost:3002*
+*Git Status: Ready for commit*

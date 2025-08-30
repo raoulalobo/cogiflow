@@ -33,7 +33,7 @@ export default function HowItWorks() {
       title: 'Build & Develop',
       description: 'We create your custom automation while you pay nothing upfront.',
       details: [
-        'Bespoke n8n workflow creation',
+        'Custom automation workflows',
         'Custom AI agent development',
         'Integration with your tools',
         'Thorough testing process'
@@ -73,7 +73,7 @@ export default function HowItWorks() {
             <span className="gradient-text">Test-Before-Pay</span>{' '}
             Process
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             We believe in earning your trust. That's why you only pay after testing 
             and approving your custom automation solution.
           </p>
@@ -106,7 +106,7 @@ export default function HowItWorks() {
                         <h3 className="text-2xl font-bold text-gray-900">
                           {step.title}
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-gray-700">
                           {step.description}
                         </p>
                       </div>
@@ -116,7 +116,7 @@ export default function HowItWorks() {
                         {step.details.map((detail, detailIndex) => (
                           <div key={detailIndex} className="flex items-center space-x-3 text-sm">
                             <CheckCircle className={`h-4 w-4 text-green-500 flex-shrink-0`} />
-                            <span className="text-gray-700">{detail}</span>
+                            <span className="text-gray-800">{detail}</span>
                           </div>
                         ))}
                       </div>
@@ -154,15 +154,15 @@ export default function HowItWorks() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center space-y-2">
               <div className="text-lg font-semibold text-gray-900">Zero Risk</div>
-              <div className="text-gray-600">No upfront payment means no financial risk for you</div>
+              <div className="text-gray-700">No upfront payment means no financial risk for you</div>
             </div>
             <div className="text-center space-y-2">
               <div className="text-lg font-semibold text-gray-900">Perfect Fit</div>
-              <div className="text-gray-600">Test everything to ensure it works exactly as needed</div>
+              <div className="text-gray-700">Test everything to ensure it works exactly as needed</div>
             </div>
             <div className="text-center space-y-2">
               <div className="text-lg font-semibold text-gray-900">Fair Pricing</div>
-              <div className="text-gray-600">Affordable rates because we want long-term relationships</div>
+              <div className="text-gray-700">Affordable rates because we want long-term relationships</div>
             </div>
           </div>
         </div>

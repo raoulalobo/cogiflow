@@ -5,22 +5,22 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'FlowTech - Custom Automation | Test Before You Pay',
-  description: 'Stop wasting time with generic templates. Get custom n8n automation built specifically for YOUR business. Test everything first, pay only when satisfied.',
-  keywords: 'custom automation, bespoke n8n workflows, test before pay, no templates, personalized automation, FlowTech',
+  title: 'FlowTech - Custom Automation Solutions | Test Before You Pay',
+  description: 'Stop wasting time with generic templates. Get custom automation solutions built with Make.com, n8n, Zapier & more. Test everything first, pay only when satisfied.',
+  keywords: 'custom automation, Make.com, n8n workflows, Zapier automation, test before pay, no templates, personalized automation, FlowTech, Microsoft Power Automate',
   authors: [{ name: 'FlowTech' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
-    title: 'FlowTech - Custom Automation | Test Before You Pay',
-    description: 'Stop wasting time with generic templates. Get custom n8n automation built specifically for YOUR business. Test everything first, pay only when satisfied.',
+    title: 'FlowTech - Custom Automation Solutions | Test Before You Pay',
+    description: 'Stop wasting time with generic templates. Get custom automation solutions built with Make.com, n8n, Zapier & more. Test everything first, pay only when satisfied.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FlowTech - Custom Automation | Test Before You Pay',
-    description: 'Stop wasting time with generic templates. Get custom n8n automation built specifically for YOUR business. Test everything first, pay only when satisfied.',
+    title: 'FlowTech - Custom Automation Solutions | Test Before You Pay',
+    description: 'Stop wasting time with generic templates. Get custom automation solutions built with Make.com, n8n, Zapier & more. Test everything first, pay only when satisfied.',
   },
 }
 
