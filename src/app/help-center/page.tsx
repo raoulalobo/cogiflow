@@ -34,7 +34,7 @@ export default function HelpCenterPage() {
   })
   
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState<{[key: string]: string}>({})
 
   const subjectOptions = [
     { value: 'general', label: 'General Inquiry' },
@@ -52,7 +52,7 @@ export default function HelpCenterPage() {
     { value: 'urgent', label: 'Urgent' }
   ]
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -67,7 +67,7 @@ export default function HelpCenterPage() {
   }
 
   const validateForm = () => {
-    const newErrors = {}
+    const newErrors: {[key: string]: string} = {}
     
     if (!formData.fullName.trim()) {
       newErrors.fullName = 'Full name is required'
@@ -93,7 +93,7 @@ export default function HelpCenterPage() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
     if (validateForm()) {
