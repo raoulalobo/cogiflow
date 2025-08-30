@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Play, ArrowRight, Sparkles, Mail, MessageSquare, Users, Settings, Zap } from 'lucide-react'
+import { Play, ArrowRight, Sparkles, Mail, MessageSquare, Users, Settings, Zap, CreditCard } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Hero() {
@@ -25,12 +25,12 @@ export default function Hero() {
 
             {/* Main heading */}
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
                 Stop Struggling with{' '}
                 <span className="gradient-text">Generic Templates</span>
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Get custom automation solutions built with <strong>Make.com</strong>, <strong>n8n</strong>, <strong>Zapier</strong> & more, specifically for YOUR business. 
+              <p className="text-base sm:text-lg lg:text-xl text-gray-800 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Get custom automation solutions built with <strong>Make.com</strong>, <strong>n8n</strong>, <strong>Zapier</strong> & <strong>AI Integration</strong>, specifically for YOUR business. 
                 Test everything first, pay only when you're completely satisfied.
               </p>
             </div>
@@ -47,10 +47,10 @@ export default function Hero() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto border-2 border-gray-300 hover:border-primary-300 transform hover:scale-105 active:scale-95 transition-all duration-200"
+                className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto border-2 border-gray-700 text-gray-800 hover:bg-gray-100 hover:border-primary-500 hover:text-primary-700 transform hover:scale-105 active:scale-95 transition-all duration-200"
               >
-                <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                Watch Demo
+                <CreditCard className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                No Credit Card Required
               </Button>
             </div>
 

@@ -146,26 +146,6 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        {/* Benefits showcase */}
-        <div className="mt-20 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-100">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            Why Our Test-Before-Pay Model Works
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center space-y-2">
-              <div className="text-lg font-semibold text-gray-900">Zero Risk</div>
-              <div className="text-gray-700">No upfront payment means no financial risk for you</div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-lg font-semibold text-gray-900">Perfect Fit</div>
-              <div className="text-gray-700">Test everything to ensure it works exactly as needed</div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-lg font-semibold text-gray-900">Fair Pricing</div>
-              <div className="text-gray-700">Affordable rates because we want long-term relationships</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )
